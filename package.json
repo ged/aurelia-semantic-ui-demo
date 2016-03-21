@@ -1,27 +1,24 @@
 {
-  "name": "aurelia-skeleton-navigation",
-  "version": "1.0.0-beta.1.1.6",
-  "description": "A starter kit for building a standard navigation-style app with Aurelia.",
+  "name": "aurelia-semantic-ui-demo",
+  "version": "0.0.1.dev",
+  "description": "A demo app and documentation for the Semantic-UI Aurelia plugin",
   "keywords": [
     "aurelia",
     "navigation",
     "skeleton"
   ],
-  "homepage": "http://aurelia.io",
+  "homepage": "https://ged.github.com/aurelia-semantic-ui",
   "bugs": {
-    "url": "https://github.com/aurelia/skeleton-navigation/issues"
+    "url": "https://bitbucket.org/ged/aurelia-semantic-ui-demo/issues"
   },
-  "license": "CC0-1.0",
-  "author": "Rob Eisenberg <rob@bluespire.com> (http://robeisenberg.com/)",
+  "license": "CC-BY-4.0",
+  "author": "Michael Granger <ged@FaerieMUD.org>",
   "main": "dist/main.js",
   "repository": {
-    "type": "git",
-    "url": "http://github.com/aurelia/skeleton-navigation"
+    "type": "hg",
+    "url": "https://bitbucket.org/ged/aurelia-semantic-ui-demo"
   },
-  "scripts": {
-    "test": "gulp test",
-    "e2e": "gulp serve webdriver-standalone e2e"
-  },
+  "scripts": {},
   "devDependencies": {
     "aurelia-bundler": "^0.3.0",
     "aurelia-tools": "^0.1.18",
