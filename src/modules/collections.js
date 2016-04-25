@@ -20,5 +20,16 @@ export class Collections {
 		email: "Email Address"
 	};
 
+	routeConfig = null;
+	navInstruction = null;
+
+
+	activate( params, routeConfig, navInstruction ) {
+		console.debug( "Route config: ", routeConfig );
+		console.debug( "Nav instruction: ", navInstruction );
+		this.routeConfig = routeConfig;
+		this.navInstruction = navInstruction;
+	}
+
 }
 
