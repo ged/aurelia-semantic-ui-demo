@@ -4,9 +4,9 @@
 	<require from="../components/element-example"></require>
 	<require from="./views.css"></require>
 	
-	<div class="ui centered container">
+	<div ui-container class="centered">
 		<header>
-			<h2 class="ui header">"View" Widgets</h2>
+			<h2 ui-header>"View" Widgets</h2>
 		</header>
 
 		<p>These are custom elements from the "Views" section of the Semantic
@@ -28,7 +28,7 @@
 			</div>
 
 			<div class="element-examples">
-				<h3 class="ui header">Examples</h3>
+				<h3 ui-header>Examples</h3>
 
 				<element-example language="markup" caption="A card with some common sections">
 					<div ui-card>
@@ -50,6 +50,140 @@
 						</div>
 					</div>
 				</element-example>
+			</div>
+
+		</element-section>
+
+
+		<element-section
+			name="statistic"
+			category="view"
+			status="incomplete"
+			description="A statistic emphasizes the current value of an attribute">
+
+			<div class="element-docs">
+				<p>The <code>ui-statistic</code> attribute corresponds to the Statistic
+				Semantic element.</p>
+
+				<p>You can group <code>ui-statistic</code>s together using a block-level element
+					with a <code>ui-statistics</code> attribute.</p>
+			</div>
+
+			<div class="element-examples">
+				<h3 ui-header>Examples</h3>
+
+				<element-example language="markup" caption="A statistic">
+					<div ui-statistic>
+						<div class="value">
+							5,550
+						</div>
+						<div class="label">
+							Downloads
+						</div>
+					</div>
+				</element-example>
+
+				<element-example language="markup" caption="A group of statistics">
+				<div ui-statistics>
+					<div ui-statistic>
+						<div class="value">
+							22
+						</div>
+						<div class="label">
+							Faves
+						</div>
+					</div>
+					<div ui-statistic>
+						<div class="value">
+							31,200
+						</div>
+						<div class="label">
+							Views
+						</div>
+					</div>
+					<div ui-statistic>
+						<div class="value">
+							22
+						</div>
+						<div class="label">
+							Members
+						</div>
+					</div>
+				</div>
+				</element-example>
+
+
+				<element-example language="markup" caption="Bindings">
+				<div ui-statistics="color.bind: statisticsColor; size.bind: statisticsSize">
+					<div ui-statistic>
+						<div class="value">
+							22
+						</div>
+						<div class="label">
+							Faves
+						</div>
+					</div>
+					<div ui-statistic>
+						<div class="value">
+							31,200
+						</div>
+						<div class="label">
+							Views
+						</div>
+					</div>
+					<div ui-statistic>
+						<div class="value">
+							22
+						</div>
+						<div class="label">
+							Members
+						</div>
+					</div>
+				</div>
+
+				<div ui-segment>
+					<div ui-header>Bound Variables</div>
+					<div ui-dropdown="selection: statisticsColor">
+						<input name="statisticsColor" type="hidden" value.bind="statisticsColor">
+						<i class="dropdown icon"></i>
+						<div class="default text">Color</div>
+						<div class="menu">
+							<div class="item" data-value="red">Red</div>
+							<div class="item" data-value="orange">Orange</div>
+							<div class="item" data-value="yellow">Yellow</div>
+							<div class="item" data-value="olive">Olive</div>
+							<div class="item" data-value="green">Green</div>
+							<div class="item" data-value="teal">Teal</div>
+							<div class="item" data-value="blue">Blue</div>
+							<div class="item" data-value="violet">Violet</div>
+							<div class="item" data-value="purple">Purple</div>
+							<div class="item" data-value="pink">Pink</div>
+							<div class="item" data-value="brown">Brown</div>
+							<div class="item" data-value="grey">Grey</div>
+							<div class="item" data-value="black">Black</div>
+						</div>
+					</div>
+
+					<div ui-dropdown="selection: statisticsSize">
+						<input name="statisticsSize" type="hidden" value.bind="statisticsSize">
+						<i class="dropdown icon"></i>
+						<div class="default text">Size</div>
+						<div class="menu">
+							<div class="item" data-value="mini">Mini</div>
+							<div class="item" data-value="tiny">Tiny</div>
+							<div class="item" data-value="small">Small</div>
+							<div class="item" data-value="medium">Medium</div>
+							<div class="item" data-value="large">Large</div>
+							<div class="item" data-value="big">Big</div>
+							<div class="item" data-value="huge">Huge</div>
+							<div class="item" data-value="massive">Massive</div>
+						</div>
+					</div>
+
+				</div>
+				</element-example>
+
+
 			</div>
 
 		</element-section>
