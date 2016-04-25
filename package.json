@@ -1,6 +1,6 @@
 {
   "name": "aurelia-semantic-ui-demo",
-  "version": "0.0.1.dev",
+  "version": "0.0.1-alpha.1",
   "description": "A demo app and documentation for the Semantic-UI Aurelia plugin",
   "keywords": [
     "aurelia",
@@ -56,6 +56,7 @@
     "dependencies": {
       "aurelia-animator-css": "npm:aurelia-animator-css@^1.0.0-beta.1.1.2",
       "aurelia-bootstrapper": "npm:aurelia-bootstrapper@^1.0.0-beta.1.1.4",
+      "aurelia-event-aggregator": "npm:aurelia-event-aggregator@^1.0.0-beta.1.2.0",
       "aurelia-fetch-client": "npm:aurelia-fetch-client@^1.0.0-beta.1.1.1",
       "aurelia-framework": "npm:aurelia-framework@^1.0.0-beta.1.1.4",
       "aurelia-history-browser": "npm:aurelia-history-browser@^1.0.0-beta.1.1.4",
@@ -82,5 +83,8 @@
       "babel-runtime": "npm:babel-runtime@^5.8.24",
       "core-js": "npm:core-js@^1.1.4"
     }
+  },
+  "dependencies": {
+    "aurelia-semantic-ui": "file:///Users/ged/source/javascript/aurelia-semantic-ui"
   }
 }
