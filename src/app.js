@@ -12,7 +12,7 @@ export class DemoApp {
 	@bindable router;
 
 	constructor( eventAggregator ) {
-		this.logger = LogManager.getLogger( 'cozyadmin' );
+		this.logger = LogManager.getLogger( 'aurelia-semantic-ui-demo' );
 		this.eventAggregator = eventAggregator;
 	}
 
@@ -62,6 +62,15 @@ export class DemoApp {
 				nav: true,
 				title: 'Modules'
 			},
+
+			{
+				route: 'behaviors',
+				name: 'behaviors',
+				moduleId: 'modules/behaviors',
+				nav: true,
+				title: 'Behaviors'
+			},
+
 
 			/* --- */
 
