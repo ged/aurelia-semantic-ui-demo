@@ -1,8 +1,8 @@
 /* -*- javascript -*- */
 "use strict";
 
-import Prism from 'prism';
-import {inject} from 'aurelia-framework';
+import {Prism} from 'prism';
+import {inject, LogManager} from 'aurelia-framework';
 
 @inject( Element )
 export class Overview {
@@ -10,6 +10,7 @@ export class Overview {
 
 
 	constructor( element ) {
+		this.logger = LogManager.getLogger( 'demo-overview' );
 		this.element = element;
 	}
 

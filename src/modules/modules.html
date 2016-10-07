@@ -14,7 +14,7 @@
 		<element-section
 			name="accordion"
 			category="module"
-			description="">
+			description="An accordion allows users to toggle the display of sections of content">
 
 			<div class="element-docs">
 				<p>The <code>ui-accordion</code> attribute corresponds to the Accordion Semantic element.</p>
@@ -204,10 +204,61 @@
 		<element-section
 			name="popup"
 			category="module"
-			description="">
+			description="A popup displays additional information on top of a page">
+
 			<div class="element-docs">
 				<p>The <code>ui-popup</code> attribute corresponds to the Popup Semantic element.</p>	
 			</div>
+
+			<div class="element-examples">
+
+				<element-example language="markup" caption="Popup content can be specified via metadata">
+					<div ui-button ui-popup class="icon" data-content="Add users to your feed">
+						<i ui-icon="name: add"></i>
+					</div>
+				</element-example>
+
+
+				<element-example language="markup" caption="Popup content can be specified via binding">
+					<div ui-button ui-popup="content.bind: popupContent; size.bind: popupSize" class="icon">
+						<i ui-icon="name: radio"></i>
+					</div>
+
+					<div ui-segment>
+					<form ui-form>
+						<div class="field">
+							<label>Popup Content</label>
+							<input value.bind="popupContent" type="text" placeholder="The popup's content!">
+						</div>
+
+						<div class="field">
+							<label>Size</label>
+							<select ui-dropdown value.bind="popupSize">
+								<option value="mini">Mini</option>
+								<option value="small">Small</option>
+								<option value="large">Large</option>
+								<option value="big">Big</option>
+								<option value="huge">Huge</option>
+							</select>
+						</div>
+					</form>
+					</div>
+				</element-example>
+
+
+				<element-example language="markup" caption="Use a selector for an existing popup">
+					<div ui-popup="selector.bind: 'div.the-popup'">
+						Popup over this!
+					</div>
+
+					<div class="the-popup ui popup">
+						<div class="header">The popup!</div>
+						<div class="content">This should be used instead of creating one dynamically.</div>
+					</div>
+				</element-example>
+
+			</div>
+
 		</element-section>
 		
 		<element-section

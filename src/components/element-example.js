@@ -1,7 +1,7 @@
 /* -*- javascript -*- */
 "use strict";
 
-import Prism from 'prism';
+import {Prism} from 'prism';
 
 import {
 	TargetInstruction,
@@ -58,6 +58,7 @@ export class ElementExampleElement {
 			}
 
 			content = content.replace( /\t/g, '    ' ).trim();
+			content = content.replace( /=""/g, '' );
 			// this.logger.debug( "Set raw content to: ", content );
 			return content;
 		} else {

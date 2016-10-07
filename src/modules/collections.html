@@ -17,11 +17,13 @@
 			category="collection"
 			status="incomplete"
 			variations="size"
+			types="element,attribute"
 			description="A breadcrumb is used to show hierarchy between content">
 
 			<div class="element-docs">
-				<p>The <code>ui-breadcrumb</code> attribute corresponds to the Breadcrumb Semantic element.</p>
-	
+				<p>The <code>ui-breadcrumb</code> element/attribute corresponds to the 
+					Breadcrumb Semantic element.</p>
+
 				<h4 ui-header>To Do</h4>
 	
 				<ul>
@@ -33,11 +35,11 @@
 			<div class="element-examples">
 
 				<element-example caption="Text divider">
-					<div ui-breadcrumb="divider: /">
+					<ui-breadcrumb divider="/">
 						<a ui-breadcrumb-section>Home</a>
 						<a ui-breadcrumb-section>Store</a>
 						<div ui-breadcrumb-section="active: true">T-Shirt</div>
-					</div>
+					</ui-breadcrumb>
 				</element-example>
 
 				<element-example caption="Icon divider">
@@ -49,13 +51,13 @@
 				</element-example>
 
 				<element-example caption="Manual text dividers">
-					<div ui-breadcrumb>
+					<ui-breadcrumb>
 						<a ui-breadcrumb-section>Home</a>
 						<span ui-breadcrumb-divider>/</span>
 						<a ui-breadcrumb-section>Registration</a>
 						<span ui-breadcrumb-divider>/</span>
 						<div ui-breadcrumb-section="active: true">Personal Information</div>
-					</div>
+					</ui-breadcrumb>
 				</element-example>
 
 				<element-example caption="Manual icon dividers">

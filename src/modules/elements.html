@@ -2,6 +2,7 @@
 
 	<require from="../components/element-section"></require>
 	<require from="../components/element-example"></require>
+	<require from="./elements.css"></require>
 	
 	<div class="ui centered container">
 		<header>
@@ -17,7 +18,7 @@
 			description="A button indicates a possible user action">
 
 			<div class="element-docs">
-				<p>The <code>ui-button</code> attribute corresponds to the Button
+				<p>The <code>ui-button</code> element/attribute corresponds to the Button
 					Semantic element.</p>
 			</div>
 
@@ -25,7 +26,7 @@
 			<div class="element-examples">
 				
 				<element-example caption="A standard button">
-					<button ui-button>Follow</button>
+					<ui-button>Follow</ui-button>
 				</element-example>
 				
 
@@ -43,18 +44,18 @@
 
 
 				<element-example caption="Animation">
-				<div ui-button class="animated" tabindex="0">
+				<ui-button animated tabindex="0">
 					<div class="visible content">Next</div>
 					<div class="hidden content">
 						<i class="right arrow icon"></i>
 					</div>
-				</div>
-				<div ui-button class="vertical animated" tabindex="0">
+				</ui-button>
+				<ui-button animated="vertical">
 					<div class="hidden content">Shop</div>
 					<div class="visible content">
 						<i class="shop icon"></i>
 					</div>
-				</div>
+				</ui-button>
 				<div ui-button class="animated fade" tabindex="0">
 					<div class="visible content">Sign-up for a Pro account</div>
 					<div class="hidden content">
@@ -65,7 +66,7 @@
 
 
 				<element-example caption="Icon binding">
-				<button ui-button="icon.bind: buttonIcon"></button>
+				<ui-button icon.bind="buttonIcon"></ui-button>
 
 				<div ui-dropdown="selection: buttonIcon">
 					<input name="buttonIcon" type="hidden" value.bind="buttonIcon">
@@ -83,30 +84,42 @@
 				</element-example>
 				
 
-				<element-example caption="Labeled icon button">
-				<button ui-button="icon: pause" class="labeled">Pause</button>
+				<element-example caption="Labeled buttons">
+				<div ui-button class="labeled">
+					<div ui-button="icon: heart">Like</div>
+					<a ui-label class="basic">2,048</a>
+				</div>
+				<ui-button labeled="left">
+					<a ui-label class="basic right pointing">2,048</a>
+					<ui-button icon="heart">Like</ui-button>
+				</ui-button>
+				<ui-button labeled="left">
+					<a ui-label class="basic">1,048</a>
+					<ui-button icon="fork"></ui-button>
+				</ui-button>
+				<ui-button icon="pause" labeled>Pause</ui-button>
 				<button ui-button="icon: right arrow" class="labeled">Next</button>
 				</element-example>
 				
 
 				<element-example caption="Color binding">
 				<div ui-segment>
-					<button ui-button="color.bind: buttonColor">${buttonColor | capitalize}</button>
+					<ui-button color.bind="buttonColor">${buttonColor | capitalize}</ui-button>
 				</div>
 
-				<button ui-button class="red basic" click.delegate="buttonColor = 'red'">Red</button>
-				<button ui-button class="orange basic" click.delegate="buttonColor = 'orange'">Orange</button>
-				<button ui-button class="yellow basic" click.delegate="buttonColor = 'yellow'">Yellow</button>
-				<button ui-button class="olive basic" click.delegate="buttonColor = 'olive'">Olive</button>
-				<button ui-button class="green basic" click.delegate="buttonColor = 'green'">Green</button>
-				<button ui-button class="teal basic" click.delegate="buttonColor = 'teal'">Teal</button>
-				<button ui-button class="blue basic" click.delegate="buttonColor = 'blue'">Blue</button>
-				<button ui-button class="violet basic" click.delegate="buttonColor = 'violet'">Violet</button>
-				<button ui-button class="purple basic" click.delegate="buttonColor = 'purple'">Purple</button>
-				<button ui-button class="pink basic" click.delegate="buttonColor = 'pink'">Pink</button>
-				<button ui-button class="brown basic" click.delegate="buttonColor = 'brown'">Brown</button>
-				<button ui-button class="grey basic" click.delegate="buttonColor = 'grey'">Grey</button>
-				<button ui-button class="black basic" click.delegate="buttonColor = 'black'">Black</button>
+				<ui-button color="red" basic click.delegate="buttonColor = 'red'">Red</ui-button>
+				<ui-button color="orange" basic click.delegate="buttonColor = 'orange'">Orange</ui-button>
+				<ui-button color="yellow" basic click.delegate="buttonColor = 'yellow'">Yellow</ui-button>
+				<ui-button color="olive" basic click.delegate="buttonColor = 'olive'">Olive</ui-button>
+				<ui-button color="green" basic click.delegate="buttonColor = 'green'">Green</ui-button>
+				<ui-button color="teal" basic click.delegate="buttonColor = 'teal'">Teal</ui-button>
+				<ui-button color="blue" basic click.delegate="buttonColor = 'blue'">Blue</ui-button>
+				<ui-button color="violet" basic click.delegate="buttonColor = 'violet'">Violet</ui-button>
+				<ui-button color="purple" basic click.delegate="buttonColor = 'purple'">Purple</ui-button>
+				<ui-button color="pink" basic click.delegate="buttonColor = 'pink'">Pink</ui-button>
+				<ui-button color="brown" basic click.delegate="buttonColor = 'brown'">Brown</ui-button>
+				<ui-button color="grey" basic click.delegate="buttonColor = 'grey'">Grey</ui-button>
+				<ui-button color="black" basic click.delegate="buttonColor = 'black'">Black</ui-button>
 				</element-example>
 
 
