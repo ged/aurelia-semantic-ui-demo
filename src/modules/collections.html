@@ -104,17 +104,86 @@
 			description="A form displays a set of related user input fields in a structured way">
 
 			<div class="element-docs">
-				<p>The <code>ui-form</code> attribute corresponds to the Form
+				<p>The <code>ui-form</code> element/attribute corresponds to the Form
 				Semantic element.</p>
 
-				<h3 ui-header>Sub-Element Custom Attributes</h3>
-
+				<ui-header>To Do</ui-header>
 				<ul ui-list>
-					<li><code>ui-checkbox</code></li>
+					<li>Integrate <code>aurelia-validation</code>.</li>
+					<li>Add a <code>ui-form-field</code> tag/attribute.</li>
 				</ul>
 			</div>
 
-			<div class="element-examples"></div>
+			<div class="element-examples">
+
+				<element-example caption="Basic form">
+				<form ui-form>
+					<div class="field">
+						<label>First Name</label>
+						<input type="text" name="first-name" placeholder="First Name">
+					</div>
+					<div class="field">
+						<label>Last Name</label>
+						<input type="text" name="last-name" placeholder="Last Name">
+					</div>
+					<div class="field">
+						<ui-checkbox checked.bind="tosAgreement">
+							I agree to the Terms and Conditions
+						</ui-checkbox>
+					</div>
+					<ui-button submit>Submit</ui-button>
+				</form>
+				</element-example>
+
+
+				<element-example caption="Form states">
+				<ui-segment>
+					<ui-form
+						loading.bind="formIsLoading"
+						success.bind="formSuccessMsg"
+						error.bind="formErrorMsg"
+						warning.bind="formWarnMsg">
+
+						<div class="field">
+							<label>Email</label>
+							<input type="email" placeholder="joe@schmoe.com">
+						</div>
+						<ui-button submit>Submit</ui-button>
+
+						<ui-message success>${formSuccessMsg}</ui-message>
+						<ui-message error>${formErrorMsg}</ui-message>
+						<ui-message warning>${formWarnMsg}</ui-message>
+					</ui-form>
+				</ui-segment>
+
+				<ui-divider hidden></ui-divider>
+
+				<ui-segment inverted>
+					<ui-form inverted>
+						<div class="field">
+							<label>Success Message</label>
+							<input type="text" value.bind="formSuccessMsg" placeholder="Form success message">
+						</div>
+
+						<div class="field">
+							<label>Error Message</label>
+							<input type="text" value.bind="formErrorMsg" placeholder="Form error message">
+						</div>
+
+						<div class="field">
+							<label>Warning Message</label>
+							<input type="text" value.bind="formWarnMsg" placeholder="Form warning message">
+						</div>
+
+						<div class="field">
+							<ui-checkbox checked.bind="formIsLoading">Loading?</ui-checkbox>
+						</div>
+					
+					</ui-form>
+				</ui-segment>
+				</element-example>
+
+			</div>
 
 		</element-section>
 
@@ -124,7 +193,7 @@
 			description="A grid is used to harmonize negative space in a layout">
 
 			<div class="element-docs">
-				<p>The <code>ui-grid</code> attribute corresponds to the Grid
+				<p>The <code>ui-grid</code> element/attribute corresponds to the Grid
 				Semantic element.</p>
 
 				<h3 ui-header>To Do</h3>
@@ -151,7 +220,7 @@
 			description="A menu displays grouped navigation actions">
 
 			<div class="element-docs">
-				<p>The <code>ui-menu</code> attribute corresponds to the Menu
+				<p>The <code>ui-menu</code> element/attribute corresponds to the Menu
 				Semantic element.</p>
 	
 				<ul ui-list>
@@ -231,7 +300,7 @@
 
 			<div class="element-docs">
 				
-				<p>The <code>ui-message</code> attribute corresponds to the Message
+				<p>The <code>ui-message</code> element/attribute corresponds to the Message
 				Semantic element.</p>
 	
 				<ul ui-list>
@@ -315,7 +384,7 @@
 			description="A table displays a collections of data grouped into rows">
 
 			<div class="element-docs">
-				<p>The <code>ui-table</code> attribute corresponds to the Table
+				<p>The <code>ui-table</code> element/attribute corresponds to the Table
 				Semantic element.</p>
 
 				<h4 ui-header>To-do</h4>

@@ -1,9 +1,9 @@
-node_modules
-jspm_packages
-bower_components
+node_modules/
+jspm_packages/
 .idea
 .DS_STORE
-/dist
+dist/
+export/
 build/reports
 coverage
 test/e2e/dist

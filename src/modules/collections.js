@@ -23,6 +23,10 @@ export class Collections {
 	routeConfig = null;
 	navInstruction = null;
 
+	formIsLoading = false;
+	formErrorMsg = null;
+	formSuccessMsg = null;
+	formWarnMsg = null;
 
 	activate( params, routeConfig, navInstruction ) {
 		console.debug( "Route config: ", routeConfig );

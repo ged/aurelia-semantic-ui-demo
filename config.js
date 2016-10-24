@@ -1,18 +1,11 @@
 System.config({
   defaultJSExtensions: true,
-  transpiler: "babel",
-  babelOptions: {
-    "optional": [
-      "es7.decorators",
-      "es7.classProperties"
-    ]
-  },
+  transpiler: false,
   paths: {
     "*": "dist/*",
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
   },
-
   map: {
     "aurelia-animator-css": "npm:aurelia-animator-css@1.0.1",
     "aurelia-bootstrapper": "npm:aurelia-bootstrapper@1.0.0",
@@ -25,16 +18,16 @@ System.config({
     "aurelia-pal-browser": "npm:aurelia-pal-browser@1.0.0",
     "aurelia-polyfills": "npm:aurelia-polyfills@1.1.1",
     "aurelia-router": "npm:aurelia-router@1.0.6",
-    "aurelia-semantic-ui": "npm:aurelia-semantic-ui@0.0.1-alpha.8",
+    "aurelia-semantic-ui": "npm:aurelia-semantic-ui@dev",
     "aurelia-templating-binding": "npm:aurelia-templating-binding@1.0.0",
     "aurelia-templating-resources": "npm:aurelia-templating-resources@1.1.1",
     "aurelia-templating-router": "npm:aurelia-templating-router@1.0.0",
-    "babel": "npm:babel-core@5.8.38",
-    "babel-runtime": "npm:babel-runtime@5.8.38",
+    "bluebird": "npm:bluebird@3.4.6",
     "core-js": "npm:core-js@1.2.7",
     "css": "github:systemjs/plugin-css@0.1.30",
     "dompurify": "npm:dompurify@0.7.4",
     "fetch": "github:github/fetch@0.11.1",
+    "jquery": "npm:jquery@3.1.1",
     "moment": "npm:moment@2.15.1",
     "numeral": "npm:numeral@1.5.3",
     "prism": "github:PrismJS/prism@1.5.1",
@@ -169,13 +162,14 @@ System.config({
       "aurelia-path": "npm:aurelia-path@1.1.1",
       "aurelia-route-recognizer": "npm:aurelia-route-recognizer@1.1.0"
     },
-    "npm:aurelia-semantic-ui@0.0.1-alpha.8": {
+    "npm:aurelia-semantic-ui@dev": {
       "aurelia-bootstrapper": "npm:aurelia-bootstrapper@1.0.0",
       "aurelia-framework": "npm:aurelia-framework@1.0.6",
       "aurelia-logging": "npm:aurelia-logging@1.0.0",
       "aurelia-logging-console": "npm:aurelia-logging-console@1.0.0",
       "aurelia-polyfills": "npm:aurelia-polyfills@1.1.1",
-      "aurelia-testing": "npm:aurelia-testing@1.0.0-beta.2.0.0"
+      "aurelia-testing": "npm:aurelia-testing@1.0.0-beta.2.0.0",
+      "jquery": "npm:jquery@3.1.1"
     },
     "npm:aurelia-task-queue@1.1.0": {
       "aurelia-pal": "npm:aurelia-pal@1.0.0"
@@ -222,7 +216,7 @@ System.config({
       "aurelia-pal": "npm:aurelia-pal@1.0.0",
       "aurelia-templating": "npm:aurelia-templating@1.1.1"
     },
-    "npm:babel-runtime@5.8.38": {
+    "npm:bluebird@3.4.6": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:buffer@3.6.0": {
